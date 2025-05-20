@@ -3,11 +3,11 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "8080:80"
+      - "9000:90"
 
   backend:
     build: ./backend
     ports:
-      - "8080:80"
+      - "9000:90"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
