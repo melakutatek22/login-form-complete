@@ -28,13 +28,13 @@ jobs:
 
       - name: 🔍 Test Backend API Endpoint
         run: |
-          curl -f http://localhost:3000/api/auth/register \
+          curl -f http://localhost:5000/api/auth/register \
           -H "Content-Type: application/json" \
           -d '{"username": "testuser", "password": "testpass"}' | grep "User registered"
 
       - name: 🔍 Test Frontend Page
         run: |
-          curl -f http://localhost:8080/index.html | grep "<title>Login Form</title>"
+          curl -f http://localhost:80/index.html | grep "<title>Login Form</title>"
 
       - name: 🧹 Clean up containers
         run: docker compose down
