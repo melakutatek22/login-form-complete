@@ -28,7 +28,7 @@ jobs:
 
       - name: 🔍 Test Backend API Endpoint
         run: |
-          curl -f http://localhost:9000/api/auth/register \
+          curl -f http://localhost:5000/api/auth/register \
           -H "Content-Type: application/json" \
           -d '{"username": "testuser", "password": "testpass"}' | grep "User registered"
 
